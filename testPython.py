@@ -5,12 +5,12 @@ def get_overall_status(filename):
         for line in file:
             if 'Overall Status:' in line:
                 overall_status_line = line.strip()
-                overall_status_text = line.split('Overall Status:')[1].strip()
+                overall_status_text = line.split('file stored')[1].strip()
                 break
     return overall_status_line, overall_status_text
 
 if __name__ == "__main__":
-    filename = "text.txt" 
+    filename = "buildConsolelog.txt" 
     overall_status_line, overall_status_text = get_overall_status(filename)
 
     if overall_status_line:
